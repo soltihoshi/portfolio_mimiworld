@@ -1,0 +1,332 @@
+@charset "uft-8";
+/* 모바일 - 사이드 */
+#mo_side{
+    position: fixed;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 1000;
+}
+.mo_gnb > ul > li{
+    border-bottom: 1px solid #ddd;
+}
+.mo_gnb .d1{
+    display: flex;
+    justify-content: space-between;
+}
+.mo_gnb .d1 a{
+    display: block;
+    padding: 17px 24px;
+    font-size: 15px;
+    color: #333;
+}
+.mo_gnb .d1 button{
+    position: relative;
+    width: 54px;
+    height: 54px;
+    margin-right: 2px;
+}
+.mo_gnb .d1 button::after{
+    content: "";
+    position: absolute;
+    left: 23px;
+    top: 23px;
+    display: block;
+    width: 7px;
+    height: 7px;
+    border-top: 1px solid #999;
+    border-right: 1px solid #999;
+    transform: rotate(135deg);
+}
+.mo_gnb .d1 button.active::after{
+    transform: rotate(-45deg);
+}
+.mo_gnb > ul > li:hover p a{
+    color: #ff6c00;
+}
+.mo_gnb .depth2{
+    display: none;
+}
+.mo_gnb .depth2 > ul{
+    padding: 15px 24px;
+    background-color: #ffdada;
+    border-top: 1px solid #e0e0e0;
+}
+.mo_gnb .depth2 > ul > li ::before{
+    content: "˖✧˖";
+    padding-right: 10px;
+}
+.mo_gnb .depth2 a{
+    display: block;
+    line-height: 36px;
+    color: #000;
+}
+.mo_gnb .depth2 a:hover{
+    color: #ff6c00;
+}
+/* 사이드 - 로고 */
+.mo_gnb .side_logo{
+    text-align: center;
+    padding: 20px 0;
+    background-color: #ffc925;
+}
+/* 사이드 - 닫기버튼  */
+.mside_close{
+    position: fixed;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    height: 58px;
+}
+.mside_close p{
+    width: 58px;
+    margin-left: auto;
+}
+.mside_close p a{
+    position: relative;
+    display: block;
+    width: 58px;
+    height: 58px;
+    text-indent: -99999px;
+}
+.mside_close p a::before, .mside_close p a::after{
+    content: "";
+    position: absolute;
+    top: 28px;
+    left: 20px;
+    width: 20px;
+    height: 2px;
+    background-color: #333;
+}
+.mside_close p a::before{
+    transform: rotate(45deg);
+}
+.mside_close p a::after{
+    transform: rotate(-45deg);
+}
+/* 사이드 - 하단 */
+.mside_bottom{
+    background-color: #fff;
+}
+.m_in{
+    position: relative;
+}
+.msb01{
+    position: relative;
+    display: flex;
+    border-bottom: 1px solid #ccc
+}
+.msb01 > div{
+    width: 50%;
+}
+.msb01 .current{
+    position: relative;
+    display: block;
+    line-height: 55px;
+    text-align: center;
+    color: #333;
+    background-color: #fff;
+    z-index: 1;
+}
+.msb01 .current::after{
+    content: "";
+    display: inline-block;
+    vertical-align: top;
+    width: 15px;
+    height: 15px;
+    margin-top: 20px;
+    margin-left: 8px;
+    background-image: url(../img/m_icon_Language-drop.png);
+    background-size: 100% auto;
+}
+.msb01 .current.on::after{
+    transform: rotate(180deg);
+}
+.msb02{
+    padding: 20px 24px;
+    background-color: #f8f8f8;
+}
+.msb_menu ul{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.msb_menu li::after{
+    content: "";
+    display: inline-block;
+    vertical-align: top;
+    width: 1px;
+    height: 16px;
+    margin-top: 8px;
+    background-color: #ddd;
+}
+.msb_menu li:last-child::after{
+    display: none;
+}
+.msb_menu li a{
+    display: inline-block;
+    padding: 5px 15px;
+    color: #333;
+}
+@media screen and (min-width:768px){
+
+}/* 768px 끝 */
+@media screen and (min-width:1440px){
+    /* 1440px - gnb */
+    .top_gnb{
+        position: relative;
+        z-index: 100;
+        padding: 30px 0;
+        border-bottom: 1px solid #ddd;
+    }
+    .top_gnb > ul{
+        display: flex;
+        justify-content: center;
+    }
+    .top_gnb > ul > li{
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+    .top_gnb > ul > li > a{
+        color: #222;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .top_gnb > ul > li > a:hover{
+        color: #ff6c00;
+    }
+    .top_gnb .depth2{
+        display: none;
+        position: absolute;
+        top: 83px;
+        left: 0;
+        right: 0;
+        padding-bottom: 30px;
+        background-color: #fff;
+    }
+    .depth2 .d2_in{
+        width: 1200px;
+        margin: 0 auto;
+    }
+    .d2_in{
+        display: flex;
+        justify-content: center;
+    }
+    .d2_in > div{
+        padding-top: 30px;
+        border-right: 1px dashed #ddd;
+    }
+    .d2_in div:last-child{
+        border: 0;
+    }
+    .d2_left{
+        width: 200px;
+    }
+    .d2_left li{
+        margin-bottom: 5px;
+    }
+    .d2_left li a{
+        color: #333;
+        font-size: 15px;
+        font-weight: 500;
+    }
+    .d2_left li a:hover{
+        color: #ff6c00;
+        text-decoration: underline;
+    }
+    .d2_right{
+        width: 740px;
+    }
+    .d2_center{
+        position: relative;
+        width: 500px;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        text-indent: -99999px;
+    }
+    .d2_center .num1{
+        position: absolute;
+        bottom: -32px;
+        left: 50%;
+        margin-left: -200px;
+        width: 500px;
+        height: 100%;
+        background-image: url(../img/gnb_sub1.jpg);
+        background-repeat: no-repeat;
+    }
+    .num2{
+        background-image: url(../img/gnb_sub2.png);
+    }
+    .num3{
+        background-image: url(../img/gnb_sub3.png);
+    }
+    .num4{
+        background-image: url(../img/gnb_sub4.png);
+    }
+    .num51{
+        background-image: url(../img/gnb_sub5_img.png);
+    }
+    .num52{
+        background-image: url(../img/gnb_sub5_text.png);
+    }
+    .d2_center .num51,.d2_center .num52{
+        position: absolute;
+        width: 740px;
+        height: 100%;
+        background-repeat: no-repeat;
+    }
+    .d2_center .num51{
+        bottom: -76px;
+        left: 230px;
+    }
+    .d2_center .num52{
+        top: 50px;
+        left: 80px;
+    }
+    .d2_img_flex{
+        display: flex;
+        justify-content: space-between;
+        margin-left: 30px;
+    }
+    .d2_img_flex > div{
+        margin-right: 30px;
+    }
+    .d2_img_flex > a{
+        display: block;
+        width: 268px;
+        height: 230px;
+        background-image: url(../img/gnb_right.png);
+        background-position: center;
+        text-indent: -99999px;
+        margin-top: -30px;
+    }
+    .d2_img_flex .txt1{
+        font-size: 15px;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+    .d2_img_flex .txt2{
+        font-size: 25px;
+        font-weight: 500;
+        margin-bottom: 30px;
+    }
+    .d2_img_flex .txt3 a{
+        display: inline-block;
+        color: #333;
+        font-weight: 500;
+    }
+    .d2_img_flex .txt3 a::after{
+        content: "";
+        display: inline-block;
+        width: 7px;
+        height: 7px;
+        border-top: 1px solid #aaa;
+        border-right: 1px solid #aaa;
+        transform: rotate(45deg);
+        vertical-align: top;
+        margin-top: 7px;
+        margin-left: 8px;
+    }
+}/* 1440px 끝 */
