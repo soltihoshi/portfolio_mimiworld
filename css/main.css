@@ -791,13 +791,16 @@
     }
     #sns{
         position: absolute;
-        right: -1%;
+        right: 2%;
         bottom: 20%;
         border-bottom: none;
         background-color: transparent;
     }
+    .sns_list{
+        width: 300px;
+    }
     .sns_list li{
-        width: 10%;
+        width: 15%;
     }
     .sns_list li img{
         width: 100%;
