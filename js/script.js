@@ -24,12 +24,12 @@ $('.m_play').click(function(){
 $('.view_card').slick({
     arrows : false,
     mobileFist : true,
-    slidesToScroll: 2,
+    slidesToScroll: 4,
     responsive: [
         {
             breakpoint: 1439,
             settings: {
-              slidesToShow: 5
+              slidesToShow: 2
             }
         }
     ]
